@@ -2,8 +2,6 @@
     <div class="col-lg-12">
         <h1 class="page-header">Checkout
             <small>Total {{total() | currency}}</small>
-
-
         </h1>
 
     </div>
@@ -12,7 +10,7 @@
 <div class="row">
   <form id="checkout-form" name="checkoutForm" class="panel">
     <p class = "text-success" ng-if="checkoutForm.$valid">Fields on this page are valid!</p>
-    <p class = "text-warning" ng-if="checkoutForm.$invalid">Fields on this page are not valid!</p>
+    <p class = "text-warning" ng-if="checkoutForm.$invalid">Please add valid information!</p>
 
 
     <div ui-view></div>

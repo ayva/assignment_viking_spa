@@ -18,10 +18,36 @@
   <!-- /.row -->
 
 
+<!-- 
 <div class="row" >
 
-  <product-template ng-repeat="(key, product) in cart">
-    </product-template>
+  <cart-template ng-repeat="(key, product) in cart"></cart-template>
+</div> -->
+<h2 ng-if="total() == 0">You don't have purchases yet.</h2>
 
+<div class="row" >
+  <table ng-if="total() > 0"  class="table">
+    <tr>
+      <th>Product name</th>
+      <th>Product price</th>
+      <th>Product quantity</th>
+      <th>Product value</th>
+    </tr>
+    <tr ng-repeat="(key, product) in cart">
+
+      <td >{{product.name}}</td>
+      <td>{{product.price | currency}}</td>
+      <td>{{product.quantity}}</td>
+      <td>{{product.quantity*product.price}}</td>
+    </tr>
+    <tr>
+      <td ></td>
+      <td></td>
+      <th>Total:</th>
+      <th>{{total()}}</th>
+
+    </tr>
+  </table>
 
 </div>
+

@@ -1,0 +1,25 @@
+<div class="row" >
+  <table ng-if="total() > 0"  class="table">
+    <tr>
+      <th>Product name</th>
+      <th>Product price</th>
+      <th>Product quantity</th>
+      <th>Product value</th>
+    </tr>
+    <tr ng-repeat="(key, product) in cart">
+
+      <td >{{product.name}}</td>
+      <td>{{product.price | currency}}</td>
+      <td>{{product.quantity}}</td>
+      <td>{{product.quantity*product.price}}</td>
+    </tr>
+    <tr>
+      <td ></td>
+      <td></td>
+      <th>Total:</th>
+      <th>{{total()}}</th>
+
+    </tr>
+  </table>
+
+</div>

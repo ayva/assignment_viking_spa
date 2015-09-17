@@ -4,10 +4,23 @@
   </a>
   <h3>
     <a href="#">{{product.name}}</a>
+    <h5> in {{product.category}}</h5> 
   </h3>
   <p>{{product.price | currency}}</p>
   <p> {{ product.quantity }} </p>
 
-  <input type='text' ng-model='productQuantity' ng-required="true" ng-pattern = "/^\d*$/">
-  <button class="btn btn-success" ng-click='addItem(product, productQuantity)'>Buy</button>
+
+<form class="form-inline">
+  <div class="form-group">
+
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Quantity" ng-model='productQuantity' ng-required="true" ng-pattern = "/^\d*$/">
+  </div>
+  
+  <button type="submit" class="btn btn-success" ng-click='addItem(product, productQuantity)'>Buy</button>
+</form>
+
+
+
+  
+  
 </div>

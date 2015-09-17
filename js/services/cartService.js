@@ -1,7 +1,6 @@
 app.factory('cartService', function(){
   var obj={};
 
-  // _cart = {id: {product: product, quantity: integer}}
 
   _cart = {};
 

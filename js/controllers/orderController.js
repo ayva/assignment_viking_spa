@@ -3,6 +3,14 @@ app.controller("OrderCtrl", ['$scope', 'cartService', function($scope, cartServi
 
   $scope.cart=cartService.listAll();
   $scope.total=cartService.total;
+
+  $scope.generateShipping = function(){
+    $scope.formData.street1 = faker.address.streetAddress();
+    $scope.formData.city = faker.address.city();
+    $scope.formData.city = faker.address.zipCode();
+    $scope.formData.state = faker.address.state();
+  };
+
   $scope.generateBilling = function(){
     $scope.formData.billing1 = $scope.formData.billing1 || $scope.formData.street1
 

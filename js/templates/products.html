@@ -1,31 +1,31 @@
 <!-- Page Header -->
-        <div>
-          <h3>
-            {{ flashText }}
-          </h3>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="page-header">Viking Store
-                    <small>Apple products</small>
+  <div>
+    <h4>
+      {{ flashText }}
+    </h4>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <h1 class="page-header">Viking Store
+              <small>Apple products</small>
 
 
-
-                  <div class="col-md-4 pull-right">
-                    <select ng-model="selectedCategory" class="form-control">
-                      <option ></option>
-                      <option ng-repeat="category in categories">{{ category }}</option>
-                    </select>
-                  </div>
-
-
-                </h1>
+            <!-- Dropdown with categories -->
+            <div class="col-md-4 pull-right">
+              <select ng-model="selectedCategory" class="form-control">
+                <option></option>
+                <option ng-repeat="category in categories">{{ category }}</option>
+              </select>
             </div>
-        </div>
-        <!-- /.row -->
 
 
+          </h1>
+      </div>
+  </div>
+  <!-- /.row -->
 
+
+<!-- Products  catalog-->
 <div class="row" >
   <product-template ng-repeat="product in products | filter: {category: selectedCategory}">
   </product-template>

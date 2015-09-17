@@ -26,6 +26,7 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('checkout.shipping',{
     url: '/shipping',
     templateUrl: 'js/templates/shipping.html',
+    link: 'generateShipping'
     
   })
 
@@ -38,6 +39,7 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('checkout.payment',{
     url: '/payment',
     templateUrl: 'js/templates/payment.html'
+
   })
 
   .state('checkout.confirm',{
